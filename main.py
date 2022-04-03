@@ -24,12 +24,12 @@ def addtolist(list, filelist, title, board):
     today=datetime.datetime.now(timezone('Asia/Seoul')).date()
     list=list
     if len(filelist) != 0:
-        if title=="오늘":
+        if title=="Today":
             list += '<p style="font-family:Gowun Dodum; margin-block-start: 0px;">%s:</p>' % title
         else:
             list += '<p style="font-family:Gowun Dodum">%s:</p>' % title
         for i in range(len(filelist)):
-            if title[:3] == "이번주":
+            if title[:3] == "This Week":
                 gap = filelist[i][2]-today
                 list += '<li><a href="/board?board={board}&id={id}">{filename}[{gap}]</a></li>'.format(board=board, id=filelist[i][0], filename=filelist[i][1], gap=gap.days)
             else:
@@ -43,29 +43,29 @@ def templateList(board):
   cur.execute("SELECT id, title FROM posts WHERE due=%s AND board=%s", (today, board))
   filelist = cur.fetchall()
   list = '<ol style="font-size:5vw; font-family:Gowun Dodum; margin: 0px 0px;" id="rcorners">';
-  list = addtolist(list, filelist, "오늘", board)
+  list = addtolist(list, filelist, "Today", board)
   cur.execute("SELECT id, title FROM posts WHERE due=%s AND board=%s", (today + datetime.timedelta(1), board))
   filelist=cur.fetchall()
-  list = addtolist(list, filelist, "내일", board)
+  list = addtolist(list, filelist, "Tomorrow", board)
   cur.execute("SELECT id, title, due FROM posts WHERE due<=%s AND due>%s AND board=%s ORDER BY due ASC", (today + datetime.timedelta( (4-today.weekday()) % 7 ), today + datetime.timedelta(1), board))
   filelist=cur.fetchall()
-  list = addtolist(list, filelist, "이번주", board)
+  list = addtolist(list, filelist, "This  Week", board)
   cur.execute("SELECT id, title, due FROM posts WHERE due>%s AND board=%s ORDER BY due ASC", (today + datetime.timedelta( (4-today.weekday()) % 7 ), board))
   filelist = cur.fetchall()
-  list = addtolist(list, filelist, "이번주 이후", board)
+  list = addtolist(list, filelist, "After This Week", board)
   cur.execute("SELECT id, title FROM posts WHERE due<%s AND board=%s ORDER BY due ASC", (today, board))
   filelist = cur.fetchall()
-  list = addtolist(list, filelist, "기한 지남", board)
+  list = addtolist(list, filelist, "Overdue", board)
   cur.close()
   return list;
 
 def create_app():
     app = Flask(__name__)
-    app.config['postgreSQL_pool'] = psycopg2.pool.SimpleConnectionPool(1, 20,user = "xwdyplbtpmigls",
-                                                  password = "97f66622910198d15f3a546f0878eeb235a29fdaf8cfa28b119281a848034de2",
-                                                  host = "ec2-54-158-247-97.compute-1.amazonaws.com",
-                                                  port = "5432",
-                                                  database = "d3t34o9801tarl")
+    app.config['postgreSQL_pool'] = psycopg2.pool.SimpleConnectionPool(1, 20,user = "<USER_NAME>",
+                                                  password = "<PASSWORD>",
+                                                  host = "<HOST>",
+                                                  port = "<PORT>",
+                                                  database = "<DATABASE>")
 
 
     @app.teardown_appcontext
@@ -81,24 +81,24 @@ def create_app():
         if request.cookies.get("board") != None:
             return redirect("/board?board="+request.cookies.get("board"))
         else:
-            return render_template('main.html', title="홈", list='''
+            return render_template('main.html', title="Home", list='''
             <script>
-            sessionStorage.name = "이오칠판";
+            sessionStorage.name = "BoredBoard";
             sessionStorage.link = "/";
-            sessionStorage.description = "헬로우";
+            sessionStorage.description = "Hello";
             </script>
             <form action="/boarding_num" method="post">
-                <input type="number" name="board_num" placeholder="기존 보드 번호 입력"><br><br>
-                <input type="password" name="num_password" placeholder="비밀번호"><br><br>
+                <input type="number" name="board_num" placeholder="Enter existing board ID"><br><br>
+                <input type="password" name="num_password" placeholder="Password"><br><br>
 
                 <input type="submit">
             </form>
             ''',
             body='''
             <form action="/boarding_name" method="post">
-                <input type="text" name="board_name" placeholder="새로운 보드 이름 입력"><br><br>
-                <input type="text" name="board_desc" placeholder="새로운 보드 설명 입력"><br><br>
-                <input type="password" name="board_pw" placeholder="새로운 보드 비밀번호 입력"><br><br>
+                <input type="text" name="board_name" placeholder="Enter new board's name"><br><br>
+                <input type="text" name="board_desc" placeholder="Enter new board's description"><br><br>
+                <input type="password" name="board_pw" placeholder="Enter new board's password"><br><br>
                 <input type="submit">
             </form>
             ''')
@@ -194,7 +194,7 @@ def create_app():
                 res = make_response(
                     '''
                     <script>
-                    alert("올바르지 않은 비밀번호");
+                    alert("Incorrect password");
                     window.location.href = '/';
                     </script>''')
                 res.set_cookie('board', '', expires=0)
@@ -205,7 +205,7 @@ def create_app():
             res = make_response(
                 '''
                 <script>
-                alert("아직 존재하지 않는 보드입니다.");
+                alert("The board doesn't exist yet.");
                 window.location.href = '/';
                 </script>''')
             res.set_cookie('board', '', expires=0)
@@ -221,7 +221,7 @@ def create_app():
         return render_template('main.html', title=title, list=templateList(int(request.args.get('board'))), body = '''
         <form action="/create_process?board={board}" method="post">
         <p><input type="text" name="title" placeholder="Title"></p>
-        <label for="due">기한:</label>
+        <label for="due">Due:</label>
         <input type="date" id="due" name="due">
         <p>
           <textarea name="description" placeholder="Description"></textarea>
@@ -261,7 +261,7 @@ def create_app():
         <form action="/update_process?board={board}" method="post">
         <input type="hidden" name="id" value="{id}">
         <p><input type="text" name="title" placeholder="Title" value="{title}"></p>
-        <label for="due">기한:</label>
+        <label for="due">Due:</label>
         <input type="date" id="due" name="due" value={date}>
         <p>
           <textarea name="description" placeholder="Description">{description}</textarea>
@@ -322,7 +322,7 @@ def create_app():
             <input type="submit">
             </div>
             </form>
-            '''.format(id=board, name=name, description=description, board=request.args.get('board')), control='<a href="/create">Create</a> <a href="/update?id={title}">Update</a>'.format(title=title))
+            '''.format(id=board, name=name, description=description, board=request.args.get('board')), control='<a href="/create">Create</a>')
             cur.close()
 
     @app.route("/updating_settings", methods = ['POST', 'GET'])
