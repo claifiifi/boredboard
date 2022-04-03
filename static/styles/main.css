@@ -1,0 +1,112 @@
+#rcorners {
+  border-radius: 50px;
+  background: white;
+  padding: 20px;
+  width: auto;
+  height: auto;
+}
+
+h2 {
+  font-family: "Gowun Dodum";
+}
+p {
+  font-family: "Gowun Dodum";
+}
+label {
+  font-family: "Gowun Dodum";
+}
+a:link {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: black;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: black;
+  background-color: transparent;
+  text-decoration: underline;
+}
+body {
+  background-color: #4eb985;
+}
+ol {
+  list-style-position: inside;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="password"],
+select,
+textarea {
+  width: 100%;
+  padding: 24px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  resize: vertical;
+  font-size: 5vw;
+}
+
+input[type="date"] {
+  width: 100%;
+  padding: 24px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  resize: vertical;
+  font-size: 5vw;
+}
+
+input[type="submit"] {
+  background-color: #4eb985;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 5vw;
+}
+
+/*
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+*/
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+label {
+  font-size: 5vw;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+button {
+  background: none !important;
+  border: none;
+  padding: 0 !important;
+  color: #000;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  input[type="submit"] {
+    width: 100%;
+    margin-top: 0;
+  }
+}

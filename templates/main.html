@@ -1,0 +1,57 @@
+<!doctype html>
+
+<html>
+<head>
+
+<title>{{title}}</title>
+<meta charset="utf-8">
+
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Hahmlet:wght@100&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+<div id="rcorners" style="width:100%; padding: 0px 0px;">
+  <span class="material-icons" style="font-size:10vw; display:inline-block; margin: 0px 0px;"><a href='/reset'>home</a></span>
+
+  <h1 style="font-size:10vw; font-family:Hahmlet; display:inline-block; margin: 0px 0px;"><a id="h1"></a></h1>
+  <span class="material-icons" style="font-size:10vw; margin: 0px 0px; float:right;  line-height: 145%;"><a id="settings">settings</a></span>
+  <p id="description" style="font-size: 5vw; margin: 0px 0px; display:inline-block;"></p>
+</div>
+
+<br><br>
+
+<div id="rcorners">
+  {{list|safe}}</br>
+  {{control|safe}}
+</div><br><br>
+
+<div id="rcorners">
+{{body|safe}}
+</div>
+</body>
+<script>
+  var h1 = document.getElementById("h1");
+  var settings = document.getElementById("settings");
+  var description = document.getElementById("description");
+  const urlStr = window.location.href;
+  const url = new URL(urlStr);
+  const urlParams = url.searchParams;
+  const board = urlParams.get('board');
+  h1.setAttribute("href", sessionStorage.link);
+  if (board != null) {
+    settings.setAttribute("href", "/settings?board=" + board);
+    h1.innerHTML = sessionStorage.name;
+    description.innerHTML = board + ". " + sessionStorage.description;
+  }
+  
+  else {
+    settings.setAttribute("href", "/")
+    h1.innerHTML = sessionStorage.name;
+    description.innerHTML = "헬로우";
+  }
+</script>
+</html>

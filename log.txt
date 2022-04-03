@@ -1,0 +1,209 @@
+commit 154305f204f4ab1a8c8fe4667048617f224127db
+Author: Kim Hyungmin <------------------------>
+Date:   Mon Nov 1 18:04:21 2021 +0900
+
+    please be fixed, error
+
+commit 0d1d05bfbf9675da39e4eb110f61c2a0f81a3bab
+Author: Kim Hyungmin <------------------------>
+Date:   Mon Nov 1 18:01:01 2021 +0900
+
+    maybe fixed the error
+
+commit 3427d7660f7c63cd445350744321df26947db97e
+Author: Kim Hyungmin <------------------------>
+Date:   Mon Nov 1 17:55:57 2021 +0900
+
+    confirm when deleting and display the tiles of the posts the dues of which are over
+
+commit fc70817d50472131d964e093240f0b8ee807b938
+Author: Kim Hyungmin <------------------------>
+Date:   Sat Oct 30 08:27:08 2021 +0900
+
+    pleased be fixed, error
+
+commit 158eebf52283ac1fbf7f20af6bfcd07dc3227c58
+Author: Kim Hyungmin <------------------------>
+Date:   Sat Oct 30 08:24:21 2021 +0900
+
+    maybe fixed the error of crashing
+
+commit aa74d1764753c522b3c5b26e62fd6187cd8f38b3
+Author: Kim Hyungmin <------------------------>
+Date:   Sat Oct 30 08:20:26 2021 +0900
+
+    ui improvements and date counting thing
+
+commit 4abb361a8b6de6f8a6996c07e52cd6a809b20443
+Author: Kim Hyungmin <------------------------>
+Date:   Thu Oct 28 07:01:06 2021 +0900
+
+    edited requirements
+
+commit fd188349480a47e34e2332d84f320b8728e54f69
+Author: Kim Hyungmin <------------------------>
+Date:   Thu Oct 28 06:54:37 2021 +0900
+
+    edited requirements
+
+commit 7428a7dea719f0b40fb9ccc778a7d711f6190064
+Author: Kim Hyungmin <------------------------>
+Date:   Thu Oct 28 06:53:33 2021 +0900
+
+    edited requirements
+
+commit 9054ded855e62b073f65d9b16de35dca28908595
+Author: Kim Hyungmin <------------------------>
+Date:   Thu Oct 28 06:50:23 2021 +0900
+
+    edited requirements
+
+commit 5fccc3624eedad1c72d3bbca528cc787392a3d90
+Author: Kim Hyungmin <------------------------>
+Date:   Thu Oct 28 06:38:39 2021 +0900
+
+    migrated to python, added due date feature
+
+commit 976813c5369611d9a369691bedb1779069fe83ba
+Author: Kim Hyungmin <------------------------>
+Date:   Thu Oct 14 18:14:06 2021 +0900
+
+    fixed port
+
+commit 5213fdadf5191272821b7bcbf12b7932e5e3d8fa
+Author: Kim Hyungmin <------------------------>
+Date:   Thu Oct 14 18:10:10 2021 +0900
+
+    fixed some annoying ui issues
+
+commit 236eed59949c10b4c6c631a1ba445bf39ff99a64
+Author: Kim Hyungmin <------------------------>
+Date:   Thu Oct 14 18:05:58 2021 +0900
+
+    changed font of title
+
+commit 284d2a4e6215e5092404dc6298c893867e52132f
+Author: Kim Hyungmin <------------------------>
+Date:   Sat Oct 9 09:57:34 2021 +0900
+
+    fixed data
+
+commit 44b25dd05a87972a94d284bd315f831a2b824c3d
+Author: Kim Hyungmin <------------------------>
+Date:   Sat Oct 9 09:56:09 2021 +0900
+
+    changed port
+
+commit 98c06685a80c6fc774fef0f3a077a2bce78ec241
+Author: Kim Hyungmin <------------------------>
+Date:   Sat Oct 9 09:54:56 2021 +0900
+
+    changed font
+
+commit b1a5158e69cbb7bfc4ea1c243f85262b3b8b1943
+Author: Kim Hyungmin <------------------------>
+Date:   Sat Oct 9 09:45:24 2021 +0900
+
+    maybe the fonts will work
+
+commit df731b8e8ea2f844f66b92cb170cedbb218f186b
+Author: Kim Hyungmin <------------------------>
+Date:   Sat Oct 9 09:40:03 2021 +0900
+
+    capitalized some words
+
+commit b6767f2bdb9de7d5b30d3ba31c8eee52d2f014d1
+Author: Kim Hyungmin <------------------------>
+Date:   Sat Oct 9 09:12:18 2021 +0900
+
+    made the list go inside
+
+commit 2c9857cec0ea056ff388dc206c96f5059c1d1094
+Author: Kim Hyungmin <------------------------>
+Date:   Sat Oct 9 09:11:14 2021 +0900
+
+    made the list go inside
+
+commit bd3b8795d44ad81a5fbbd1ac8c43271f1786009c
+Author: Kim Hyungmin <------------------------>
+Date:   Fri Oct 8 19:29:44 2021 +0900
+
+    made the font work
+
+commit 80640f34fac4da8a128332e0437e39f53416e9c4
+Author: Kim Hyungmin <------------------------>
+Date:   Fri Oct 8 19:27:42 2021 +0900
+
+    added font
+
+commit e13b8cdff67608b92ded7148ec6653b563275af9
+Author: Kim Hyungmin <------------------------>
+Date:   Fri Oct 8 19:23:03 2021 +0900
+
+    maybe fixed the app from crashing
+
+commit cf0f4532de22121f5d3c7fef00a154c2c5211fe0
+Author: Kim Hyungmin <------------------------>
+Date:   Fri Oct 8 18:20:43 2021 +0900
+
+    fixed annoying ui thing
+
+commit f7b646abb7c78c2e1bf3b52a1a3067599a11d3df
+Author: Kim Hyungmin <------------------------>
+Date:   Thu Oct 7 20:36:06 2021 +0900
+
+    more minor fixes
+
+commit cf206a172cd6369f8e34975885386e1d77293abb
+Author: Kim Hyungmin <------------------------>
+Date:   Thu Oct 7 20:26:30 2021 +0900
+
+    minor ui fix
+
+commit c820a469f709508ea0bb0c65bf68ac6370a41135
+Author: Kim Hyungmin <------------------------>
+Date:   Thu Oct 7 20:24:25 2021 +0900
+
+    minor ui fix
+
+commit 0d6a9bddc7d59d777f6c4271e53b4b00e8999e94
+Author: Kim Hyungmin <------------------------>
+Date:   Thu Oct 7 20:21:40 2021 +0900
+
+    bug fixes
+
+commit b522c828af0b887b4ef6a4eab5ef5145865df3ef
+Author: Kim Hyungmin <------------------------>
+Date:   Thu Oct 7 18:59:50 2021 +0900
+
+    ui fixes
+
+commit 3a39e03d143ad55d4867438d3dba55ee771a9ba3
+Author: Kim Hyungmin <------------------------>
+Date:   Wed Sep 29 07:10:05 2021 +0900
+
+    changed to ol
+
+commit 5ffaa9799d8a94b36fc8b521cbc5e0aef4fa5b69
+Author: Kim Hyungmin <------------------------>
+Date:   Wed Sep 29 07:06:10 2021 +0900
+
+    changed font
+
+commit 45ac0b9bba8616ebd2ecde1729b07530a2be55eb
+Author: Kim Hyungmin <------------------------>
+Date:   Wed Sep 29 06:57:25 2021 +0900
+
+    edited package.json
+
+commit 713cb6d8fb0bd57e413098f77e7b8d3dd4d0bd76
+Author: Kim Hyungmin <------------------------>
+Date:   Wed Sep 29 06:46:04 2021 +0900
+
+    make it better
+
+commit 6493e64d394be07ca372a1bbe9418b2740d0e6f9
+Author: Kim Hyungmin <------------------------>
+Date:   Mon Sep 27 07:24:39 2021 +0900
+
+    make it better
