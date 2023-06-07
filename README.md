@@ -28,13 +28,13 @@ pip install Flask psycopg2
 1. Clone the repository or download the source code.
 
 ```shell
-git clone https://github.com/yourusername/task-manager.git
+git clone https://github.com/harrykim1007/boredboard.git
 ```
 
 2. Navigate to the project directory.
 
 ```shell
-cd task-manager
+cd boredboard
 ```
 
 3. Install the required dependencies.
