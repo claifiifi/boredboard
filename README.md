@@ -94,8 +94,4 @@ Contributions to the Task Manager are welcome! If you have any ideas, improvemen
 
 ## Contact
 
-For any questions or inquiries, please contact [your-email@example.com](mailto:your-email@example.com).
-
----
-
-Feel free to customize this README.md file as per your specific requirements and add any additional sections or information that you think would be relevant.
+For any questions or inquiries, please contact [hairyharry0707@gmail.com](mailto:hairyharry0707@gmail.com).
